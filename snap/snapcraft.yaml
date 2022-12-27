@@ -14,7 +14,7 @@ confinement: strict
 compression: lzo
 
 apps:
-  terraform:
+  terraform-docs:
     command: terraform-docs
     plugs: 
         - home
