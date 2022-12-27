@@ -7,7 +7,7 @@ issues: https://github.com/am6puk/terraform-docs/issues
 source-code: https://github.com/am6puk/terraform-docs
 website: https://terraform-docs.io/
 description: |
-  A utility to generate documentation from Terraform modules in various output formats.
+  Terraform Docs - A utility to generate documentation from Terraform modules in various output formats.
 base: core22
 grade: stable
 confinement: strict
@@ -21,10 +21,10 @@ apps:
 
 architectures:
   - build-on: amd64
-  - build-on: armhf
+#  - build-on: armhf
   - build-on: arm64
   - build-on: s390x
-  - build-on: ppc64el
+#  - build-on: ppc64el
 
 parts:
   terraform:
@@ -33,9 +33,9 @@ parts:
     source-type: git
     source-tag: "v$SNAPCRAFT_PROJECT_VERSION"
     build-snaps: [go]
-    build-environment:
-      - CGO_ENABLED: "0"
-      - GOFLAGS: "-mod=readonly"
+    # build-environment:
+    #   - CGO_ENABLED: "0"
+    #   - GOFLAGS: "-mod=readonly"
     override-build: |
       make build
       cp bin/linux-$SNAP_ARCH/terraform-docs $SNAPCRAFT_PART_INSTALL/terraform-docs
