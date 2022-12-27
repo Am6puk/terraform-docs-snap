@@ -38,6 +38,6 @@ parts:
       - GOFLAGS: "-mod=readonly"
     override-build: |
       make build
-      cp bin/terraform-docs $SNAPCRAFT_PART_INSTALL/terraform-docs
+      cp bin/linux-$SNAP_ARCH/terraform-docs $SNAPCRAFT_PART_INSTALL/terraform-docs
     stage:
       - terraform-docs
