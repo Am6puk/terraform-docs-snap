@@ -1,5 +1,5 @@
 name: terraform-docs
-version: "0.19.0"
+version: "0.20.0"
 summary: Terraform Docs Generate Terraform modules documentation in various formats
 license: MIT
 contact: am6puk@gmail.com
